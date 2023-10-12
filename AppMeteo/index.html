@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Météo</title>
+    <link rel="icon" href="img/sun.ico">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <span class="loader" id="loader"></span>
+      </div>
+      
+    <form id="form" action=""  onChange="onSelect()">
+        <label for="choixVille">Ville :</label>
+        <input placeholder="Paris" id="choixVille"></input>
+      </form>
+  <div class="content" id="content">
+    <div id="today">
+        <ul id="infosDuJour">
+            <li>Météo</li>
+        </ul>
+    </div>
+    <ul id="chaine"></ul>
+</div>
+</body>
+</html>

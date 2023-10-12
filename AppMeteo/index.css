@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+body{
+    background-image: linear-gradient(#6AC6EE, #0476c1);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: "Calibri", Arial, sans-serif;
+}
+
+.loader {
+	width: 100px;
+	height: 100px;
+	border: 5px solid #000;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+    #loadingScreen {
+        position: absolute;
+        top: 47%;
+        left: 47%;
+    }
+
+#form {
+	text-align: center;
+	padding: 2vh 0;
+}
+
+#form label{
+	font-size: 1.8em;
+}
+
+#choixVille {
+    font-size: 1.8em;
+    padding: 5px;
+}
+
+#today {
+	position: relative;
+	width: 27vw;
+	min-width: 400px;
+	background-image: linear-gradient(135deg,#acfdfd, #68c5ff);
+	margin: 2vh auto 4vh auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1vh 2vw;
+	box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+#infosDuJour {
+	position: absolute;
+	left: -200px;
+	text-align: right;
+	font-size: 1.6em;
+	max-width: 180px;
+}
+
+#infosDuJour li{
+    padding-bottom:10px;
+}
+
+#today h1{ /*titre main meteo*/
+    font-size: 3.5em;
+}
+
+#stats {/*ensemble stats main meteo*/
+	margin-top: 3vh;
+	width: 100%;
+}
+
+.stat{/*solo stat main meteo*/
+    display:flex;
+	justify-content: space-around;
+}
+
+
+#today h3 {/*titre solo stat main meteo*/
+	margin: 20px 0;
+	font-size: 1.7em;
+}
+
+#chaine{/*meteo semaine*/
+    display: flex;
+	justify-content: space-evenly;
+}
+
+.jour {/*cellule meteo semaine*/
+	width: 11vw;
+	background-image: linear-gradient(135deg,#acfdfd, #68c5ff);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    padding:2vh;
+    min-height: 23vh;
+    min-width: 140px;
+    /*Effet*/
+    position: relative;
+    overflow: hidden;
+    /*Effet*/
+}
+
+
+.jour .details {
+	position: absolute;
+	width: 100%;
+	bottom: -60px;
+	left: 0;
+	z-index: 2;
+	transition: 0.5s;
+}
+
+
+.jour:hover .details {
+    bottom: 10px;
+}
+
+
+.jour .details img {
+	margin-bottom: -10px;
+	transition: margin-bottom 0.5s ease-in-out;
+}
+
+
+.jour:hover .details img{
+    margin-bottom: -30px;
+    transition: margin-bottom 0.5s ease-in-out;
+}
+
+
+.jour .day{
+transition: margin-top 0.5s ease-in-out;
+}
+
+.jour:hover .day{
+	margin-top: -1vh;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+.jour .dayStats{
+	padding: 0 2vw;
+}
+
+
+.jour:hover .dayStats {
+	margin-top: 1vh;
+}
+
+.jour .dayStat{
+        display: flex;
+        justify-content: space-between;
+}
+
+.jour .temp {
+	font-size: 2.5em;
+	transition: font-size ease-in-out 0.25s;
+	margin-bottom: 2vh;
+}
+
+.jour:hover .temp{
+    font-size: 2em;
+    margin-bottom: 1vh;
+}
+
