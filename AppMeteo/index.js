@@ -144,6 +144,9 @@ fetch('http://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&lang=
             }
         }
         tableauToday = []; //vider tableau
+        
+    document.getElementById('loadingScreen').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
     })
     .catch(() => {
         document.getElementById('loadingScreen').style.display = 'block';
@@ -252,6 +255,9 @@ function onSelect() {
     let selectedValue = choixVille.value;
     let placeholder = majuscule(selectedValue);
     choixVille.setAttribute("placeholder", placeholder);
+    
+    document.getElementById('loadingScreen').style.display = 'block';
+    document.getElementById('content').style.display = 'none';
 
 
     //Changement de l'adresse pour l'API
