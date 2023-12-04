@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+nav{
+    display:flex;
+    align-items: center;
+    height: 7vh;
+    padding:0 4vw 0 5vw;
+    justify-content: space-between;
+    background-color: #23252b;
+    font-family: Lato,Helvetica Neue,helvetica,sans-serif;
+}
+nav svg{
+    height: 3vh;
+}
+nav li{
+    padding: 0 1vw;
+    font-size: 0.7em;
+    color: white;
+    font-weight: 500;
+    height: 7vh;
+    align-items: center;
+    display: flex;
+}
+nav li:hover{
+    background-color: #141519;
+}
+nav a{
+    color:#f47521;
+    transition: color 0.4s ease;
+    margin-right: 1vw;
+}
+nav a:hover{
+    color:white;
+    transition: color 0.4s ease;
+}
+#menu{
+    display: flex;
+    align-items: center;
+}
+#liNaviguer{
+    display: block;
+    width: 5vw;
+    padding-top: 4vh;
+}
+#naviguer{
+display: flex;
+}
+#naviguerMore{
+    display: flex;
+    margin-left: -1vw;
+    margin-top: 2vh;
+    padding: 1vh 0;
+    background-color: #141519;
+    width: 35vw;
+}
+#naviguerMore ul{
+    background-color: #141519;
+}
+#naviguerMore li{
+    width: 9vw;
+    padding: 1vh 1vw;
+    height: inherit;
+    font-size: 0.8em;
+}
+#naviguerMore li:hover{
+    background-color: #23252b;
+}
+#wrapperPere{
+    background-color: #141519;
+    width: 25vw;
+    font-size: 0.8em;
+    border-left: .125rem solid #23252b;
+}
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+}
+#title{
+    text-transform: uppercase;
+    color: gray;
+    grid: 1;
+}
+#wrapperPere .cat, #wrapperPere #title{
+    padding: 1vh;
+}
+#wrapper div:hover{
+    background-color: #23252b;
+}
+#news{
+    display: flex;
+    }
+.droplist{
+    align-items: center;
+}
+#more{
+    display: flex;
+}
+#more img{
+    height: 100%;
+}
+#user{
+    display: flex;
+    width: 3vw;
+}
