@@ -24,6 +24,9 @@ nav li{
     height: 7vh;
     align-items: center;
     display: flex;
+
+    cursor: pointer;
+    user-select: none;
 }
 nav li:hover{
     background-color: #141519;
@@ -41,24 +44,30 @@ nav a:hover{
     display: flex;
     align-items: center;
 }
+.active{
+    background-color: #141519;
+}
 #liNaviguer{
-    display: block;
+    display:block;
     width: 5vw;
-    padding-top: 4vh;
+}
+#naviguerAlign{
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 #naviguer{
 display: flex;
 }
-#naviguerMore{
-    display: flex;
+.naviguerVisible{
+    display: flex !important;
+}
+#naviguerMore, #newsMore{
+    display: none;
     margin-left: -1vw;
-    margin-top: 2vh;
     padding: 1vh 0;
     background-color: #141519;
     width: 35vw;
-}
-#naviguerMore ul{
-    background-color: #141519;
 }
 #naviguerMore li{
     width: 9vw;
@@ -94,6 +103,9 @@ display: flex;
 #news{
     display: flex;
     }
+.newsVisible{
+    display: block !important;
+}
 .droplist{
     align-items: center;
 }
