@@ -10,11 +10,17 @@ let choixVille = document.getElementById("choixVille");
 choixVille.value = "";
 
 function majuscule(chaine) {
-    let premiereLettreMajuscule = chaine.charAt(0).toUpperCase();
-    let resteDeLaChaineEnMinuscules = chaine.slice(1).toLowerCase();
-    let chaineMajuscule = premiereLettreMajuscule + resteDeLaChaineEnMinuscules;
-    return chaineMajuscule;
-}
+    let table = [];
+    let words = chaine.split(' ');
+    words.forEach(element => {
+      let premiereLettreMajuscule = element.charAt(0).toUpperCase();
+      let resteDeLaChaineEnMinuscules = element.slice(1);
+      let chaineMajuscule = premiereLettreMajuscule + resteDeLaChaineEnMinuscules;
+      table.push(chaineMajuscule);
+      return table;
+    });
+    return table.join(" ");
+  }
 
 //Date
 //Jour de la semaine (en majuscule)
@@ -113,7 +119,7 @@ fetch('http://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&lang=
         let description = majuscule(resJson.weather[0].description);
 
         tableauToday.push([
-            dateMaj + " " + moisMaj,
+            dateMaj,
             description,
             resJson.name + " (" + resJson.sys.country + ")",
             "https://openweathermap.org/img/wn/" + resJson.weather[0].icon + "@2x.png",
